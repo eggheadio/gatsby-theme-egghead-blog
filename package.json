@@ -1,7 +1,7 @@
 {
   "name": "@eggheadio/gatsby-theme-egghead-blog",
   "description": "This is a theme for egghead content creator blogs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "egghead.io <support@egghead.io> (https://egghead.io)",
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "gatsby-link": "^2.0.7",
     "gatsby-mdx": "^0.3.4",
     "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-compile-es6-packages": "^1.0.6",
     "gatsby-plugin-emotion": "^4.0.1",
     "gatsby-plugin-feed": "^2.0.11",
     "gatsby-plugin-google-analytics": "^2.0.8",
