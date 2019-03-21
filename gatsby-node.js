@@ -1,7 +1,5 @@
 const path = require('path')
-
 const _ = require('lodash')
-const paginate = require('gatsby-awesome-pagination')
 const PAGINATION_OFFSET = 7
 
 const createPosts = (createPage, createRedirect, edges) => {
@@ -28,6 +26,41 @@ const createPosts = (createPage, createRedirect, edges) => {
         id: node.id,
         prev,
         next,
+      },
+    })
+  })
+}
+
+const createPaginatedPages = (createPage, edges, pathPrefix, context) => {
+  const pages = edges.reduce((acc, value, index) => {
+    const pageIndex = Math.floor(index / PAGINATION_OFFSET)
+
+    if (!acc[pageIndex]) {
+      acc[pageIndex] = []
+    }
+
+    acc[pageIndex].push(value.node.id)
+
+    return acc
+  }, [])
+
+  pages.forEach((page, index) => {
+    const previousPagePath = `${pathPrefix}/${index + 1}`
+    const nextPagePath = index === 1 ? pathPrefix : `${pathPrefix}/${index - 1}`
+
+    createPage({
+      path: index > 0 ? `${pathPrefix}/${index}` : `${pathPrefix}`,
+      component: require.resolve(`./src/templates/blog.js`),
+      context: {
+        pagination: {
+          page,
+          nextPagePath: index === 0 ? null : nextPagePath,
+          previousPagePath:
+            index === pages.length - 1 ? null : previousPagePath,
+          pageCount: pages.length,
+          pathPrefix,
+        },
+        ...context,
       },
     })
   })
@@ -87,41 +120,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         $components: path.resolve(__dirname, 'src/components'),
       },
     },
-  })
-}
-
-const createPaginatedPages = (createPage, edges, pathPrefix, context) => {
-  const pages = edges.reduce((acc, value, index) => {
-    const pageIndex = Math.floor(index / PAGINATION_OFFSET)
-
-    if (!acc[pageIndex]) {
-      acc[pageIndex] = []
-    }
-
-    acc[pageIndex].push(value.node.id)
-
-    return acc
-  }, [])
-
-  pages.forEach((page, index) => {
-    const previousPagePath = `${pathPrefix}/${index + 1}`
-    const nextPagePath = index === 1 ? pathPrefix : `${pathPrefix}/${index - 1}`
-
-    createPage({
-      path: index > 0 ? `${pathPrefix}/${index}` : `${pathPrefix}`,
-      component: require.resolve(`./src/templates/blog.js`),
-      context: {
-        pagination: {
-          page,
-          nextPagePath: index === 0 ? null : nextPagePath,
-          previousPagePath:
-            index === pages.length - 1 ? null : previousPagePath,
-          pageCount: pages.length,
-          pathPrefix,
-        },
-        ...context,
-      },
-    })
   })
 }
 
