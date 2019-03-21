@@ -1,7 +1,7 @@
 {
   "name": "@eggheadio/gatsby-theme-egghead-blog",
   "description": "This is a theme for egghead content creator blogs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "egghead.io <support@egghead.io> (https://egghead.io)",
   "repository": {
     "type": "git",
