@@ -1,7 +1,7 @@
 {
   "name": "@eggheadio/gatsby-theme-egghead-blog",
   "description": "This is a theme for egghead content creator blogs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "egghead.io <support@egghead.io> (https://egghead.io)",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "@emotion/styled": "^10.0.5",
     "@mdx-js/mdx": "^0.16.6",
     "@mdx-js/tag": "^0.16.6",
-    "core-js": "^2.6.1",
+    "core-js": "2",
     "emotion": "^10.0.5",
     "emotion-server": "^10.0.5",
     "emotion-theming": "^10.0.6",
