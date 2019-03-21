@@ -67,9 +67,9 @@
     "dotenv": "^6.2.0",
     "dotenv-parse-variables": "^0.2.0",
     "gatsby": "^2.2.0-alpha.6",
+    "prettier": "1.14.3",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "prettier": "1.14.3"
+    "react-dom": "^16.8.0"
   },
   "keywords": [
     "gatsby",
