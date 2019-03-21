@@ -1,9 +1,20 @@
 {
-  "name": "gatsby-theme-egghead-blog",
+  "name": "@eggheadio/gatsby-theme-egghead-blog",
   "description": "This is a theme for egghead content creator blogs",
   "version": "1.0.0",
   "author": "egghead.io <support@egghead.io> (https://egghead.io)",
-  "repository": "https://github.com/eggheadio/gatsby-theme-egghead-blog",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggheadio/gatsby-theme-egghead-blog.git"
+  },
+  "license": "MIT",
+  "main": "gatsby-config.js",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "serve public/",
+    "now-build": "npm run build"
+  },
   "peerDependencies": {
     "dotenv": "^6.2.0",
     "gatsby": "^2.2.0-alpha.6",
@@ -66,14 +77,11 @@
   "keywords": [
     "gatsby",
     "theme",
-    "blog"
+    "blog",
+    "egghead"
   ],
-  "license": "MIT",
-  "main": "gatsby-config.js",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "serve public/",
-    "now-build": "npm run build"
-  }
+  "bugs": {
+    "url": "https://github.com/eggheadio/gatsby-theme-egghead-blog/issues"
+  },
+  "homepage": "https://github.com/eggheadio/gatsby-theme-egghead-blog#readme"
 }
