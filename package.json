@@ -4,6 +4,14 @@
   "version": "1.0.0",
   "author": "egghead.io <support@egghead.io> (https://egghead.io)",
   "repository": "https://github.com/eggheadio/gatsby-theme-egghead-blog",
+  "license": "MIT",
+  "main": "gatsby-config.js",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "serve public/",
+    "now-build": "npm run build"
+  },
   "peerDependencies": {
     "dotenv": "^6.2.0",
     "gatsby": "^2.2.0-alpha.6",
@@ -66,14 +74,7 @@
   "keywords": [
     "gatsby",
     "theme",
-    "blog"
-  ],
-  "license": "MIT",
-  "main": "gatsby-config.js",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "serve public/",
-    "now-build": "npm run build"
-  }
+    "blog",
+    "egghead"
+  ]
 }
