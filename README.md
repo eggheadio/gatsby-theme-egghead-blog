@@ -1,6 +1,12 @@
 # gatsby-theme-egghead-blog
 This is a [theme](https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/) version of our [gatsby-starter-egghead-blog](https://github.com/eggheadio/gatsby-starter-egghead-blog).
 
+## Installation
+
+```
+yarn add -D @eggheadio/gatsby-theme-egghead-blog
+```
+
 ## Using the theme
 Themes are in development so we have to use themes with `__expetimentalTheme` like this in our `gatsby-config.js`:
 
