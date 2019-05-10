@@ -18,6 +18,12 @@ module.exports = {
     author: {
       name: "YOUR NAME"
     },
+    social: {
+      twitter: "@swyx",
+      githubUrl: "no",
+      linkedinUrl: "no"
+    },
+    canonicalUrl: "no",
     description: "A DESCRIPTION",
     siteUrl: "YOUR INTENDED URL"
   },
