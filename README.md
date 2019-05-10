@@ -13,6 +13,14 @@ Themes are in development so we have to use themes with `__expetimentalTheme` li
 ```
 // gatsby-config.js
 module.exports = {
+  siteMetadata: {
+    title: "YOUR SITE TITLE",
+    author: {
+      name: "YOUR NAME"
+    },
+    description: "A DESCRIPTION",
+    siteUrl: "YOUR INTENDED URL"
+  },
   __experimentalThemes: ['@eggheadio/gatsby-theme-egghead-blog'],
 }
 ```
