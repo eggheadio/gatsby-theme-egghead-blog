@@ -23,6 +23,8 @@ module.exports = {
       githubUrl: "no",
       linkedinUrl: "no"
     },
+    keywords: "keywords",
+    image: "your-image.jpg",
     canonicalUrl: "no",
     description: "A DESCRIPTION",
     siteUrl: "YOUR INTENDED URL"
@@ -56,7 +58,7 @@ slug: my-blogpost
 date: 2019-09-05
 published: true
 description: a blogpost description
-banner: null
+banner: /colocated-image.png
 categories: blog, post
 keywords: blogging, posting
 ---
