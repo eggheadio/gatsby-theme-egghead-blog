@@ -19,9 +19,9 @@ module.exports = {
       name: "YOUR NAME"
     },
     social: {
-      twitter: "@swyx",
-      githubUrl: "no",
-      linkedinUrl: "no"
+      twitter: "twitter here",
+      githubUrl: "github here",
+      linkedinUrl: "linked in here"
     },
     keywords: ["keywordhere"],
     image: "your-image.jpg",
