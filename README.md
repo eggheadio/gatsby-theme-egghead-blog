@@ -13,7 +13,7 @@ Themes are in development so we have to use themes with `__expetimentalTheme` li
 ```
 // gatsby-config.js
 module.exports = {
-  __experimentalThemes: ['gatsby-theme-egghead-blog'],
+  __experimentalThemes: ['@eggheadio/gatsby-theme-egghead-blog'],
 }
 ```
 
