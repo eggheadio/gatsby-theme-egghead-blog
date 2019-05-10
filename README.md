@@ -1,13 +1,35 @@
 # gatsby-theme-egghead-blog
 This is a [theme](https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/) version of our [gatsby-starter-egghead-blog](https://github.com/eggheadio/gatsby-starter-egghead-blog).
 
+## Installation
+
+```
+yarn add -D @eggheadio/gatsby-theme-egghead-blog
+```
+
 ## Using the theme
 Themes are in development so we have to use themes with `__expetimentalTheme` like this in our `gatsby-config.js`:
 
 ```
 // gatsby-config.js
 module.exports = {
-  __experimentalThemes: ['gatsby-theme-egghead-blog'],
+  siteMetadata: {
+    title: "YOUR SITE TITLE",
+    author: {
+      name: "YOUR NAME"
+    },
+    social: {
+      twitter: "@swyx",
+      githubUrl: "no",
+      linkedinUrl: "no"
+    },
+    keywords: ["keywordhere"],
+    image: "your-image.jpg",
+    canonicalUrl: "no",
+    description: "A DESCRIPTION",
+    siteUrl: "YOUR INTENDED URL"
+  },
+  __experimentalThemes: ['@eggheadio/gatsby-theme-egghead-blog'],
 }
 ```
 
@@ -25,6 +47,22 @@ content/
       index.md
 gatsby-config.js
 package.json
+```
+
+The markdown files expect optional frontmatter fields like the below:
+
+```md
+---
+title: My Blogpost
+slug: my-blogpost
+date: 2019-09-05
+published: true
+description: a blogpost description
+banner: /colocated-image.png
+categories: blog, post
+keywords: blogging, posting
+author: yourname
+---
 ```
 
 ## Override theme components (Component Shadowing)
