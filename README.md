@@ -23,7 +23,7 @@ module.exports = {
       githubUrl: "no",
       linkedinUrl: "no"
     },
-    keywords: "keywords",
+    keywords: ["keywordhere"],
     image: "your-image.jpg",
     canonicalUrl: "no",
     description: "A DESCRIPTION",
@@ -61,6 +61,7 @@ description: a blogpost description
 banner: /colocated-image.png
 categories: blog, post
 keywords: blogging, posting
+author: yourname
 ---
 ```
 
