@@ -33,6 +33,21 @@ gatsby-config.js
 package.json
 ```
 
+The markdown files expect optional frontmatter fields like the below:
+
+```md
+---
+title: My Blogpost
+slug: my-blogpost
+date: 2019-09-05
+published: true
+description: a blogpost description
+banner: null
+categories: blog, post
+keywords: blogging, posting
+---
+```
+
 ## Override theme components (Component Shadowing)
 
 To override a theme component, you will need to add `src/gatsby-theme-egghead-blog`. You may override anything in the `gatsby-theme-egghead-blog/src` directory.
