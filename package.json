@@ -17,7 +17,7 @@
   },
   "peerDependencies": {
     "dotenv": "^6.2.0",
-    "gatsby": "^2.2.5"
+    "gatsby": "^2.4.6"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
