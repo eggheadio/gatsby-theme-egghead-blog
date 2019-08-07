@@ -5,14 +5,14 @@ module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
     title: config.siteTitle,
+    description: config.siteDescription,
+    keywords: ['Video Blogger'],
+    canonicalUrl: config.siteUrl,
     twitterUrl: config.twitterUrl,
     twitterHandle: config.twitterHandle,
     fbAppID: config.fbAppID,
     githubUrl: config.githubUrl,
     githubHandle: config.githubHandle,
-    description: config.siteDescription,
-    keywords: ['Video Blogger'],
-    canonicalUrl: config.siteUrl,
     image: config.siteLogo,
     author: {
       name: config.author,
