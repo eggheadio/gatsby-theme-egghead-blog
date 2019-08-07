@@ -7,7 +7,8 @@
   },
   "main": "gatsby-config.js",
   "dependencies": {
-    "gatsby-theme-egghead-blog": "*",
-    "gatsby": "latest"
+    "gatsby": "latest",
+    "gatsby-plugin-manifest": "^2.2.5",
+    "gatsby-theme-egghead-blog": "*"
   }
 }

@@ -4,7 +4,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-module.exports = config => ({
+module.exports = ({ contentBlog = 'content/blog' }) => ({
   plugins: [
     {
       resolve: `gatsby-plugin-page-creator`,
@@ -15,8 +15,8 @@ module.exports = config => ({
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `content/blog`,
-        name: 'blog',
+        path: contentBlog,
+        name: contentBlog,
       },
     },
     {
@@ -39,12 +39,6 @@ module.exports = config => ({
     'gatsby-plugin-emotion',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `GOOGLE_ID`,
-      },
-    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {

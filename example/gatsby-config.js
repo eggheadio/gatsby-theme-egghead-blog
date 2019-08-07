@@ -29,7 +29,7 @@ module.exports = {
     },
   },
   plugins: [
-    {resolve: `gatsby-theme-egghead-blog`, options: {config}},
+    {resolve: `gatsby-theme-egghead-blog`, options: {}},
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
