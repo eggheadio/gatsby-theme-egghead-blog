@@ -3,7 +3,7 @@
   "scripts": {
     "example": "yarn workspace example",
     "start": "yarn example start",
-    "theme": "yarn workspace packages/gatsby-theme-egghead-blog"
+    "theme": "yarn workspace gatsby-theme-egghead-blog"
   },
   "workspaces": [
     "packages/*",
