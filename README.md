@@ -72,7 +72,7 @@ your-site/
 ├── package.json
 ```
 
-# Step 3: Adding Frontmatter Placeholder
+### Step 3: Adding Frontmatter Placeholder
 
 Frontmatter is the block in a markdown file denoted by surrounding hyphens: `---`.
 
@@ -109,7 +109,7 @@ This exists to populate GraphQL fields and avoid null errors. It should contain 
 
 Then add [this image](./example/content/posts/frontmatter-placeholder/images/banner.jpg) (or any other image) to the images folder inside of `content/blog/frontmatter-placeholder/images`.
 
-# Step 4: Configuring siteMetadata
+### Step 4: Configuring siteMetadata
 
 In order for this theme to function properly, these fields need to be inside of `siteMetadata` in you `gatsby-config.js`.
 
