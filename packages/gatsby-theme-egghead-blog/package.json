@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-egghead-blog",
   "description": "This is a theme for egghead content creator blogs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "egghead.io <support@egghead.io> (https://egghead.io)",
   "repository": "https://github.com/eggheadio/gatsby-theme-egghead-blog",
   "dependencies": {
@@ -65,11 +65,5 @@
     "gatsby"
   ],
   "license": "MIT",
-  "main": "gatsby-config.js",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "serve public/",
-    "now-build": "npm run build"
-  }
+  "main": "gatsby-config.js"
 }
