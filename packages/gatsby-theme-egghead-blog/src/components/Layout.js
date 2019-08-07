@@ -226,7 +226,7 @@ export default ({
   )
 }
 
-export const pageQuery = graphql`
+export const siteQuery = graphql`
   fragment site on Site {
     siteMetadata {
       title

@@ -95,7 +95,7 @@ const createPaginatedPages = (createPage, edges, pathPrefix, context) => {
 
     createPage({
       path: index > 0 ? `${pathPrefix}/${index}` : `${pathPrefix}`,
-      component: require.resolve(`src/templates/blog.js`),
+      component: require.resolve(`./src/templates/blog.js`),
       context: {
         pagination: {
           page,
