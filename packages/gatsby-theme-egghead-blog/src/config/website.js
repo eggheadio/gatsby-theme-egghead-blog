@@ -21,8 +21,9 @@ module.exports = {
   backgroundColor: '#2b2e3c',
 
   // Social component
-  twitter: 'https://twitter.com/eggheadio/',
+  twitterUrl: 'https://twitter.com/eggheadio/',
   twitterHandle: '@eggheadio',
-  github: 'https://github.com/eggheadio/',
-  linkedin: '',
+  githubUrl: 'https://github.com/eggheadio/',
+  githubHandle: 'eggheadio',
+  fbAppID: '',
 }

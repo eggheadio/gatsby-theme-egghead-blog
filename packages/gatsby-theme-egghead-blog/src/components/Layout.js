@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { lighten } from 'polished'
 import { Global, css } from '@emotion/core'
@@ -10,7 +10,6 @@ import mdxComponents from './mdx'
 import Header from './Header/'
 import reset from '../lib/reset'
 import { fonts } from '../lib/typography'
-import config from '../config/website'
 import Footer from '../components/Footer'
 
 const getGlobalStyles = theme => {
@@ -146,6 +145,22 @@ export default ({
     }
   }
 
+  const {
+    site: {
+      siteMetadata: { title, twitterUrl, githubUrl },
+    },
+  } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          twitterUrl
+          githubUrl
+        }
+      }
+    }
+  `)
+
   const [themeName, setTheme] = useState(initializeTheme)
 
   useEffect(() => {
@@ -184,7 +199,7 @@ export default ({
           `}
         >
           <Helmet
-            title={config.siteTitle}
+            title={title}
             meta={[
               { name: 'description', content: description },
               { name: 'keywords', content: keywords },
@@ -199,6 +214,8 @@ export default ({
           </MDXProvider>
           {!noFooter && (
             <Footer
+              twitterUrl={twitterUrl}
+              githubUrl={githubUrl}
               author={site.siteMetadata.author.name}
               noSubscribeForm={noSubscribeForm}
             />
@@ -213,6 +230,8 @@ export const pageQuery = graphql`
   fragment site on Site {
     siteMetadata {
       title
+      siteUrl
+      twitterHandle
       description
       author {
         name

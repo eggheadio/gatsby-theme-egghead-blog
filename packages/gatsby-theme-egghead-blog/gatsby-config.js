@@ -11,7 +11,11 @@ module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
     title: config.siteTitle,
+    twitterUrl: config.twitterUrl,
     twitterHandle: config.twitterHandle,
+    fbAppID: config.fbAppID,
+    githubUrl: config.githubUrl,
+    githubHandle: config.githubHandle,
     description: config.siteDescription,
     keywords: ['Video Blogger'],
     canonicalUrl: config.siteUrl,
@@ -28,10 +32,6 @@ module.exports = {
       name: config.organization,
       url: config.siteUrl,
       logo: config.siteLogo,
-    },
-    social: {
-      twitter: config.twitterHandle,
-      fbAppID: '',
     },
   },
   plugins: [
