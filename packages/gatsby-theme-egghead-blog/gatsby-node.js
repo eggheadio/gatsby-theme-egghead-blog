@@ -184,5 +184,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       value: node.frontmatter.redirects,
     })
+
+    createNodeField({
+      name: 'isPost',
+      node,
+      value: true,
+    })
   }
 }
