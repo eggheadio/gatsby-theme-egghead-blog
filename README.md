@@ -133,7 +133,7 @@ module.exports = {
     author: {
       name: config.author,
       minibio: `
-        <strong>egghead</strong> is the premier place on the internet for 
+        <strong>egghead</strong> is the premier place on the internet for
         experienced developers to enhance their skills and stay current
         in the fast-faced field of web development.
       `,
@@ -155,12 +155,14 @@ module.exports = {
 
 ## Override theme components (Component Shadowing)
 
-To override a theme component you will need to add `starter/src/gatsby-theme-egghead-blog`. You may override anything in the `gatsby-theme-egghead-blog/src` directory.
+Only the components that are exported from the theme are available to be overridden.
+
+To override a theme component you will need to add `@eggheadio/gatsby-theme-egghead-blog/`. You may override anything in the `gatsby-theme-egghead-blog/src` directory.
 
 For example, if you would like to override the default `Header` component. You would a file like this.
 
 ```js
-// starter/src/gatsby-theme-egghead-blog/Header.js
+// @egghead/gatsby-theme-egghead-blog/components/Header/index.js
 import React from 'react'
 
 class Header extends React.Component {
@@ -172,4 +174,13 @@ class Header extends React.Component {
 export default Header
 ```
 
-Now "hello egghead" will be rendered anywhere the old Header component was render.
+Now "hello egghead" will be rendered anywhere the old `Header` component was render.
+
+If you shadowing a component that references other theme components (and you still need them), You will need to import them. To import them, you start with `@eggheadio/gatsby-theme-egghead-blog/` and fill in the relative path of the component that you need.
+
+e.g.
+
+```js
+import { withTheme } from '@eggheadio/gatsby-theme-egghead-blog/components/Theming'
+import { rhythm } from 'eggheadio/gatsby-theme-egghead-blog/lib/typography’
+```
