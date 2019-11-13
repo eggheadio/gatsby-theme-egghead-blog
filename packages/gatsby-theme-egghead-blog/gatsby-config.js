@@ -4,7 +4,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-module.exports = ({ contentBlog = 'content/blog' }) => ({
+module.exports = ({ contentBlog = 'content/blog', rssFeedTitle = 'Blog RSS Feed' }) => ({
   plugins: [
     {
       resolve: `gatsby-plugin-page-creator`,
@@ -89,7 +89,7 @@ module.exports = ({ contentBlog = 'content/blog' }) => ({
               }
             `,
             output: '/rss.xml',
-            title: 'Blog RSS Feed',
+            title: rssFeedTitle,
           },
         ],
       },
