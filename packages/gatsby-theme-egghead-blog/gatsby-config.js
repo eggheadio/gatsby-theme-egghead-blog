@@ -34,6 +34,20 @@ module.exports = ({ contentBlog = 'content/blog', rssFeedTitle = 'Blog RSS Feed'
         ],
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              backgroundColor: '#fafafa',
+              maxWidth: 1035,
+            },
+          }
+        ],
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-emotion',
